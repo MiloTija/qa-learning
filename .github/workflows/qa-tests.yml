@@ -37,3 +37,8 @@ jobs:
           echo "Date: $(date)"
           echo "Status: All checks passed! ✅"
           echo "================================"
+
+      - name: Intentional fail test
+        run: |
+          echo "Checking critical file..."
+          cat ucenje-dani/dan-10/critical-file.txt    
