@@ -1,0 +1,39 @@
+name: QA Learning Pipeline
+
+on:
+  push:
+    branches: [ main ]
+  pull_request:
+    branches: [ main ]
+  workflow_dispatch:
+
+jobs:
+  qa-checks:
+    runs-on: ubuntu-latest
+    
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      - name: Display repository info
+        run: |
+          echo "Repository: ${{ github.repository }}"
+          echo "Branch: ${{ github.ref_name }}"
+          echo "Commit: ${{ github.sha }}"
+          echo "Triggered by: ${{ github.actor }}"
+
+      - name: Check test files exist
+        run: |
+          echo "Checking QA files..."
+          ls -la ucenje-dani/
+          echo "Security checklist exists:"
+          cat ucenje-dani/dan-9/security-checklist.md
+
+      - name: QA Status Report
+        run: |
+          echo "================================"
+          echo "QA LEARNING PIPELINE"
+          echo "================================"
+          echo "Date: $(date)"
+          echo "Status: All checks passed! ✅"
+          echo "================================"
