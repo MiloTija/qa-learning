@@ -24,6 +24,8 @@ Minimum 25 stavki u kategorijama:
 -> sve core funkcije rade
 -> back btn/swipe funkcionise
 -> deep links rade
+-> login funkcionise
+-> dodavanje u korpu funkcionise
 
 □ Interrupcije (5 stavki)
 -> dolazni pozivi- app se pauzira/nastavlja
@@ -39,7 +41,7 @@ Minimum 25 stavki u kategorijama:
 -> Slow conection handling
 -> time out poruke
 -> sinhronizacija nakon gubitka i ponovnog uspostavljanje mreze
--> 
+-> 4G/3G/2G degradacija
 
 
 Sačuvaj u "dan-12/mobile-checklist.md"
